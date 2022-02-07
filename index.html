@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&family=Open+Sans:wght@300;500&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Envelo - odbierz paczkę</title>
+</head>
+<body>
+<div id="modal" class="modal">
+    <div class="modal-wrapper">
+        <h2 class="modal-title">Paczka odebrana!</h2>
+        <p class="modal-text">Zrobiłeś to w czasie <span id="modal_time"></span> sekund!</p>
+        <p class="modal-text">Czy możemy zrobić do Ciebie coś jeszcze ?</p>
+        <div class="modal-button-wrapper">
+            <button class="btn btn-modal btn-finish" type="button">To wszystko na dziś</button>
+            <button class="btn btn-modal btn-restart" type="button">Odbierz kolejną paczkę</button>
+        </div>
+    </div>
+</div>
+<main id="main_app" class="main active">
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Envelo</h1>
+            <p class="header-text">Możesz mieć swoją przesyłkę w kilkanaście sekund.</p>
+            <p class="header-text bold">Rozpocznij klikając w przycisk</p>
+        </header>
+        <section class="package-form section">
+            <div class="package-form-wrapper">
+                <form>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="input_phone">Numer telefonu</label>
+                            <input id="input_phone" class="form-control" type="text" placeholder="wpisz numer"
+                                   maxlength="9">
+                            <p class="form-error-msg error-msg-phone"></p>
+                        </div>
+                        <div class="input-group">
+                            <label for="input_code">Kod odbioru</label>
+                            <input id="input_code" class="form-control" type="text" placeholder="wpisz kod"
+                                   maxlength="4">
+                            <p class="form-error-msg error-msg-code"></p>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-center btn-submit">Odbierz paczkę</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<script src="./js/app.js" type="module"></script>
+</body>
+</html>
